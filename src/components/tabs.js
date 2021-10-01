@@ -51,10 +51,6 @@ let topicsResponse = response.data.topics;
 let tabTwo = Tabs(topicsResponse)
 tabSelector.appendChild(tabTwo);
 
-
-  // const topicsResponse = Tabs(response);
-  // const tabs = document.querySelector(selector);
-  // tabs.appendChild(topicsResponse);
 })
 
 .catch(error => {
