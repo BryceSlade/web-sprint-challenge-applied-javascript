@@ -24,8 +24,8 @@ const Card = (article) => {
   const headline = document.createElement('div');
   const author = document.createElement('div');
   const imgDiv = document.createElement('div');
-  const img = document.createElement('div');
-  const span = document.createElement('div');
+  const img = document.createElement('img');
+  const span = document.createElement('span');
 
   outerDiv.classList.add('card');
   headline.classList.add('headline');
@@ -38,13 +38,15 @@ const Card = (article) => {
   author.appendChild(span);
   imgDiv.appendChild(img);
 
-  headline.textContent = article.headline;
-  img.src = article.authorPhoto;
-  span.textContent = `By ${article.authorName}`;
+  headline.textContent = article['headline'];
+  img.src = article['authorPhoto'];
+  span.textContent = article['authorName'];
 
   outerDiv.addEventListener('click', event => {
     console.log(headline);
   })
+
+  return outerDiv;
 
 }
 
